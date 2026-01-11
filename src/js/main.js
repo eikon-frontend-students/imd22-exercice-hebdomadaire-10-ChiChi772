@@ -24,12 +24,14 @@ playButton.addEventListener("click", () => {
   audio.play();
   playButton.style.display = "none";
   pauseButton.style.display = "flex";
+  player.classList.add('playing');
 });
 
 pauseButton.addEventListener("click", () => {
   audio.pause();
   playButton.style.display = "flex";
   pauseButton.style.display = "none";
+  player.classList.remove('playing');
 });
 
 audio.addEventListener("timeupdate", () => {
